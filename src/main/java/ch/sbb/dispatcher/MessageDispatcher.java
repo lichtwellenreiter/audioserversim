@@ -15,6 +15,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 public class MessageDispatcher {
@@ -46,8 +47,8 @@ public class MessageDispatcher {
             Speakerlist sl = new Speakerlist();
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            //Document doc = dBuilder.parse(this.audiomessage);
-            Document doc = dBuilder.parse("D:\\01_Projekte\\AudioServerSim\\src\\main\\resources\\KIBAudioTestInterface\\AudioServer(1322)-KIB ComNode (LS1) AGSB 2 BTA-FRQ\\anschluss_biel.xml");
+            Document doc = dBuilder.parse(this.audiomessage);
+            //Document doc = dBuilder.parse("KIBAudioTestInterface/AudioServerLS/anschluss_biel.xml");
 
             doc.getDocumentElement().normalize();
             logger.info("ROOT: " + doc.getDocumentElement().getNodeName());
@@ -93,9 +94,7 @@ public class MessageDispatcher {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
     private List<String> transformXML() {
         return null;
     }

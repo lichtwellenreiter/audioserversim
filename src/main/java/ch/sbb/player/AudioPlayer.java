@@ -3,7 +3,6 @@ package ch.sbb.player;
 import ch.sbb.config.Config;
 import ch.sbb.dispatcher.AudioFile;
 import ch.sbb.dispatcher.AudioOut;
-import ch.sbb.dispatcher.MessageDispatcher;
 import ch.sbb.helpers.Helper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,9 +26,6 @@ public class AudioPlayer {
         config.readConfig();
 
         while (runner) {
-
-            MessageDispatcher md = new MessageDispatcher();
-            md.enqueueMessage("eee");
 
             if (audioplayerqueue.size() > 0) {
 
@@ -91,19 +87,14 @@ public class AudioPlayer {
             }
 
             try {
-                Thread.sleep(10000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
-
     }
 
-
     private void run() {
-
-
     }
 }
 

@@ -1,75 +1,11 @@
-2018-03-25 10:27:19.783 [AGSBAdapter] INFO  ch.sbb.adapter.AgsbAdapter - AGSB Adapter started
-2018-03-25 10:27:20.572 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190589
-2018-03-25 10:27:22.655 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_ZG14
-2018-03-25 10:27:25.331 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190468
-2018-03-25 10:27:26.795 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1GN
-2018-03-25 10:27:28.793 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1DMT
-2018-03-25 10:27:30.094 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1DL
-2018-03-25 10:27:31.697 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190010
-2018-03-25 10:27:33.037 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_SU14
-2018-03-25 10:27:34.615 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_Z019
-2018-03-25 10:27:36.012 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_G02
-2018-03-25 10:27:37.672 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_ZG14
-2018-03-25 10:27:39.287 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190468
-2018-03-25 10:27:40.188 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1LY
-2018-03-25 10:27:41.203 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1BN
-2018-03-25 10:27:42.093 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190010
-2018-03-25 10:27:43.114 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_SU14
-2018-03-25 10:27:44.557 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_Z022
-2018-03-25 10:27:46.180 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_G06
-2018-03-25 10:27:47.980 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_ZG10
-2018-03-25 10:27:49.282 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_Z005
-2018-03-25 10:27:50.387 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190468
-2018-03-25 10:27:51.188 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1NE
-2018-03-25 10:27:52.323 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1YVLB
-2018-03-25 10:27:53.767 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1LS
-2018-03-25 10:27:54.795 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190010
-2018-03-25 10:27:55.792 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_SU14
-2018-03-25 10:27:57.190 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_Z045
-2018-03-25 10:27:58.900 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_G05
-2018-03-25 10:28:00.884 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_ZG14
-2018-03-25 10:28:02.543 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190468
-2018-03-25 10:28:03.423 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1SCB
-2018-03-25 10:28:05.339 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1CTY
-2018-03-25 10:28:06.818 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_H1CF
-2018-03-25 10:28:08.396 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_F190010
-2018-03-25 10:28:09.409 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_SU14
-2018-03-25 10:28:10.971 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_Z047
-2018-03-25 10:28:12.685 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: D_G201
-2018-03-25 10:28:14.615 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1BI
-2018-03-25 10:28:15.681 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F1011
-2018-03-25 10:28:18.170 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_ZG14
-2018-03-25 10:28:19.717 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F5031
-2018-03-25 10:28:20.551 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1GN
-2018-03-25 10:28:22.484 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1DMT
-2018-03-25 10:28:23.632 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1DL
-2018-03-25 10:28:24.524 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F1005
-2018-03-25 10:28:25.600 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_SU14
-2018-03-25 10:28:26.686 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_Z019
-2018-03-25 10:28:27.845 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_G102
-2018-03-25 10:28:29.050 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_ZG14
-2018-03-25 10:28:30.421 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F5031
-2018-03-25 10:28:31.079 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1LY
-2018-03-25 10:28:32.963 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1BN
-2018-03-25 10:28:35.689 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F1005
-2018-03-25 10:28:37.803 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_SU14
-2018-03-25 10:28:38.797 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_Z022
-2018-03-25 10:28:39.858 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_G106
-2018-03-25 10:28:41.135 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_ZG10
-2018-03-25 10:28:42.463 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_Z005
-2018-03-25 10:28:43.442 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F5031
-2018-03-25 10:28:44.082 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1NE
-2018-03-25 10:28:45.252 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1YVLB
-2018-03-25 10:28:46.695 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1LS
-2018-03-25 10:28:47.786 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F1005
-2018-03-25 10:28:48.798 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_SU14
-2018-03-25 10:28:49.884 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_Z045
-2018-03-25 10:28:51.252 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_G105
-2018-03-25 10:28:52.612 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_ZG14
-2018-03-25 10:28:54.148 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F5031
-2018-03-25 10:28:54.938 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1SCB
-2018-03-25 10:28:58.042 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1CTY
-2018-03-25 10:28:59.420 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_H1CF
-2018-03-25 10:29:00.726 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_F1005
-2018-03-25 10:29:01.670 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playing: F_SU14
-2018-03-25 10:29:02.760 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - Filename in af list playi
+2018-03-25 22:42:57.784 [AGSBAdapter] INFO  ch.sbb.adapter.AgsbAdapter - AGSB Adapter started
+2018-03-25 22:42:57.784 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:42:59.791 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:01.795 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:03.799 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:05.803 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:07.807 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:09.808 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:11.812 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:13.817 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
+2018-03-25 22:43:15.820 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue is empty.
