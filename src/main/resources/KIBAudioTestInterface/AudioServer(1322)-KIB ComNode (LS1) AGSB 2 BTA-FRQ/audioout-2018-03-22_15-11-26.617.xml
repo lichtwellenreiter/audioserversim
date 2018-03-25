@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audioout>
+    <handle>57214424</handle>
+    <priority>1</priority>
+    <speakerlist>9690112013001</speakerlist>
+    <timeout>10</timeout>
+    <audiofile>
+        <pause>400</pause>
+        <pathid>0</pathid>
+        <filename>F_G101</filename>
+    </audiofile>
+    <audiofile>
+        <pause>0</pause>
+        <pathid>0</pathid>
+        <filename>F_F100238</filename>
+    </audiofile>
+</audioout>

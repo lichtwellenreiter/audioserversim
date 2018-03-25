@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audioout>
+    <handle>57215213</handle>
+    <priority>3</priority>
+    <speakerlist>9690431001001</speakerlist>
+    <timeout>60</timeout>
+    <audiofile>
+        <pause>400</pause>
+        <pathid>0</pathid>
+        <filename>G_CFF</filename>
+    </audiofile>
+    <audiofile>
+        <pause>400</pause>
+        <pathid>0</pathid>
+        <filename>F_G101</filename>
+    </audiofile>
+    <audiofile>
+        <pause>200</pause>
+        <pathid>0</pathid>
+        <filename>F_ZG314</filename>
+    </audiofile>
+    <audiofile>
+        <pause>0</pause>
+        <pathid>0</pathid>
+        <filename>F_F5031</filename>
+    </audiofile>
+    <audiofile>
+        <pause>0</pause>
+        <pathid>0</pathid>
+        <filename>F_H1CF</filename>
+    </audiofile>
+    <audiofile>
+        <pause>0</pause>
+        <pathid>0</pathid>
+        <filename>F_F1005</filename>
+    </audiofile>
+    <audiofile>
+        <pause>200</pause>
+        <pathid>0</pathid>
+        <filename>F_SU15</filename>
+    </audiofile>
+    <audiofile>
+        <pause>0</pause>
+        <pathid>0</pathid>
+        <filename>F_Z213</filename>
+    </audiofile>
+</audioout>

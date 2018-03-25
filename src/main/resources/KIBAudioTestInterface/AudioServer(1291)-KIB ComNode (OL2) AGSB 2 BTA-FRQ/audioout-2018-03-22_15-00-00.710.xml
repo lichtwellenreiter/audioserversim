@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audioout>
+    <handle>57212821</handle>
+    <priority>4</priority>
+    <speakerlist>9690102603001,9690102602001,9690102604001,9690102601001</speakerlist>
+    <timeout>120</timeout>
+    <audiofile>
+        <pause>400</pause>
+        <pathid>0</pathid>
+        <filename>F_F190484</filename>
+    </audiofile>
+    <audiofile>
+        <pause>400</pause>
+        <pathid>0</pathid>
+        <filename>E_F191017</filename>
+    </audiofile>
+</audioout>

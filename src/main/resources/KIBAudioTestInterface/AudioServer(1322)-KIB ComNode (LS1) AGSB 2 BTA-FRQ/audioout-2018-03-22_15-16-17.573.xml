@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audioout>
+    <handle>6344015</handle>
+    <priority>1</priority>
+    <speakerlist>9690130009001</speakerlist>
+    <timeout>10</timeout>
+    <audiofile>
+        <pause>100</pause>
+        <pathid>0</pathid>
+        <filename>Gong_7</filename>
+    </audiofile>
+    <audiofile>
+        <pause>50</pause>
+        <pathid>0</pathid>
+        <filename>F_F200333</filename>
+    </audiofile>
+    <audiofile>
+        <pause>0</pause>
+        <pathid>0</pathid>
+        <filename>F_F200410</filename>
+    </audiofile>
+</audioout>
