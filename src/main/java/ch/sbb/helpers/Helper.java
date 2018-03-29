@@ -36,7 +36,7 @@ public class Helper {
         System.out.println("                                                                              ");
         System.out.println("==============================================================================");
         System.out.println("|                                                                            |");
-        System.out.println("|                        (c) 2018 Florian Thiévent                           |");
+        System.out.println("|                        (c) 2018 Florian Thievent                           |");
         System.out.println("|                                                                            |");
         System.out.println("==============================================================================");
     }
