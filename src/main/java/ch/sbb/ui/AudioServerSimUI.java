@@ -1,48 +1,51 @@
 package ch.sbb.ui;
 
-import javafx.application.Application;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import ch.sbb.player.AudioPlayer;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 
-public class CalculatorApp extends Application {
+public class AudioServerSimUI extends GridPane {
 
-    private double xOffset = 0;
-    private double yOffset = 0;
+    private Label aqstate;
+    private Label aqstatenum;
+    public int aqnum;
 
-    @Override
-    public void start(Stage primaryStage) {
-        Parent rootPanel = new CalculatorUI();
-
-        Scene scene = new Scene(rootPanel);
-
-        primaryStage.setTitle("Calculator");
-        primaryStage.setScene(scene);
-
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
-        scene.setFill(Color.TRANSPARENT);
-
-        primaryStage.setHeight(590);
-        primaryStage.setWidth(320);
-        primaryStage.setResizable(false);
-
-        rootPanel.setOnMousePressed(event -> {
-            xOffset = event.getSceneX();
-            yOffset = event.getSceneY();
-        });
-        rootPanel.setOnMouseDragged(event -> {
-            primaryStage.setX(event.getScreenX() - xOffset);
-            primaryStage.setY(event.getScreenY() - yOffset);
-        });
-
-        primaryStage.show();
+    public AudioServerSimUI(){
+        initializeSelf();
+        initializeControls();
+        layoutControls();
+        setupEventHandlers();
+        setupValueChangedListeners();
+        setupBindings();
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    private void initializeSelf(){
+        String stylesheet = getClass().getResource("style.css").toExternalForm();
+        getStylesheets().clear();
+        getStylesheets().add(stylesheet);
     }
 
+    private void initializeControls(){
+
+        aqstate = new Label("AudioQueueState: ");
+        aqstatenum = new Label();
+        aqstatenum.setText(String.valueOf(AudioPlayer.audioplayerqueue.size()));
+
+    }
+
+    private void layoutControls(){
+        add(aqstate,0,0);
+        add(aqstatenum, 1,0);
+    }
+
+    private void setupEventHandlers(){
+
+    }
+
+    private void setupValueChangedListeners(){
+    }
+
+    private void setupBindings(){
+
+    }
 }
