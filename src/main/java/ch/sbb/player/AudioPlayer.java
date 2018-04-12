@@ -28,12 +28,12 @@ public class AudioPlayer {
 
         while (runner) {
 
-            MessageDispatcher md = new MessageDispatcher();
-            md.enqueueMessage("eee");
+            //MessageDispatcher md = new MessageDispatcher();
+            //md.enqueueMessage("eee");
 
             if (audioplayerqueue.size() > 0) {
 
-                AudioOut ao = audioplayerqueue.peek();
+                AudioOut ao = audioplayerqueue.poll();
                 logger.info("Peeked Handle: " + ao.getHandle() + " from audioplayerqueue");
 
                 for (AudioFile af : ao.getAudiofilelist()) {
