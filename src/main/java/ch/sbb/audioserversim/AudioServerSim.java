@@ -2,10 +2,15 @@ package ch.sbb.audioserversim;
 
 import ch.sbb.adapter.AgsbAdapter;
 import ch.sbb.config.Config;
+import ch.sbb.dispatcher.AudioOut;
 import ch.sbb.helpers.Helper;
-import ch.sbb.ui.AudioServerSimApp;
-import org.apache.commons.cli.*;
 import ch.sbb.player.AudioPlayer;
+import org.apache.commons.cli.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 public class AudioServerSim {
 
@@ -25,12 +30,16 @@ public class AudioServerSim {
         assm.config = new Config(helper.getConfigFileWithPath());
         assm.config.readConfig();
         helper.printHead();
+        /***************************************
+         * Declaring Queues for Communication between Threads
+         **************************************/
+        final BlockingQueue<String> agsboutqueue = new ArrayBlockingQueue<String>(100);
 
         new Thread() {
 
             public void run() {
                 currentThread().setName("AGSBAdapter");
-                AgsbAdapter.main(args);
+                AgsbAdapter.main(args, agsboutqueue);
             }
         }.start();
 
@@ -41,15 +50,13 @@ public class AudioServerSim {
             }
         }.start();
 
-        if( cmd.hasOption("w") ){
+        /*if( cmd.hasOption("w") ){
             new Thread(){
                 public void run(){
                     currentThread().setName("AudioServerSimUI");
                     AudioServerSimApp.main(args);
                 }
             }.start();
-        }
-
-
+        }*/
     }
 }

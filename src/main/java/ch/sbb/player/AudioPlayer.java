@@ -3,7 +3,6 @@ package ch.sbb.player;
 import ch.sbb.config.Config;
 import ch.sbb.dispatcher.AudioFile;
 import ch.sbb.dispatcher.AudioOut;
-import ch.sbb.dispatcher.MessageDispatcher;
 import ch.sbb.helpers.Helper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,25 +15,27 @@ import java.util.concurrent.BlockingQueue;
 
 public class AudioPlayer {
 
-    private static boolean runner = true;
-    final static Logger logger = LogManager.getLogger(AudioPlayer.class);
     public final static BlockingQueue<AudioOut> audioplayerqueue = new ArrayBlockingQueue<AudioOut>(100);
+    final static Logger logger = LogManager.getLogger(AudioPlayer.class);
+    private static boolean runner = true;
+    private static BlockingQueue<String> handlequeue;
     private static Helper helper = new Helper();
     private static Config config = new Config(helper.getConfigFileWithPath());
 
-    public static void main(String[] args) {
+    public AudioPlayer(BlockingQueue<String> queue) {
+        handlequeue = queue;
+    }
 
+    public static void main(String[] args) {
+        logger.info("AudioPlayer started");
         config.readConfig();
 
         while (runner) {
 
-            //MessageDispatcher md = new MessageDispatcher();
-            //md.enqueueMessage("eee");
-
             if (audioplayerqueue.size() > 0) {
 
                 AudioOut ao = audioplayerqueue.poll();
-                logger.info("Peeked Handle: " + ao.getHandle() + " from audioplayerqueue");
+                logger.info("Polled Handle: " + ao.getHandle() + " from audioplayerqueue");
 
                 for (AudioFile af : ao.getAudiofilelist()) {
                     logger.info("Filename in af list playing: " + af.getFilename());
@@ -83,27 +84,23 @@ public class AudioPlayer {
 
                     sourceLine.drain();
                     sourceLine.close();
-
                 }
 
+                handlequeue.add(String.valueOf(ao.getHandle()));
+
             } else {
-                logger.debug("AudioPlayer Queue is empty.");
+                logger.debug(String.format("AudioPlayer Queue size: %s", audioplayerqueue.size()));
             }
 
             try {
-                Thread.sleep(10000);
+                Thread.sleep(config.getWaitAfterAudioOut());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
-
     }
 
-
     private void run() {
-
-
     }
 }
 

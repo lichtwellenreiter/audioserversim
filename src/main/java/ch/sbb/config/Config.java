@@ -1,8 +1,11 @@
 package ch.sbb.config;
 
+import ch.sbb.helpers.Helper;
+import ch.sbb.player.AudioPlayer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import ch.sbb.helpers.Helper;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -47,10 +50,11 @@ public class Config {
         try {
             FileWriter fw = new FileWriter(configfile);
             fw.write("#Configfile for Audioserversimulator\n");
-            fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\System-Wave\n");
-            fw.write("audiofilesext: .wav\n");
-            fw.write("lsgroupnr: 9690430005001\n");
-            fw.write("buffersize: 128000\n");
+            fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\System-Wave\t# Share where AudioFragments are stored\n");
+            fw.write("audiofilesext: .wav\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Extension for the AudioFragments\n");
+            fw.write("lsgroupnr: 9690430005001\t\t\t\t\t\t\t\t\t\t\t\t\t\t# LS Group Number\n");
+            fw.write("buffersize: 128000\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Buffersize for Audioplayer\n");
+            fw.write("waitafteraudioout: 10000\t\t\t\t\t\t\t\t\t\t\t\t\t# Waittime in ms\n");
             fw.close();
 
         } catch (IOException e) {
@@ -109,4 +113,6 @@ public class Config {
     public int getBuffersize() {
         return configreader.getBuffersize();
     }
+
+    public int getWaitAfterAudioOut(){ return  configreader.getWaitafteraudioout(); }
 }

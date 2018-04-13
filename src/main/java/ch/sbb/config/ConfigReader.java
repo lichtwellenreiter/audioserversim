@@ -6,6 +6,7 @@ public class ConfigReader {
     private String audiofilesext;
     private long lsgroupnr;
     private int buffersize;
+    private int waitafteraudioout;
 
     public String getAudiofilespath() {
         return audiofilespath;
@@ -21,5 +22,9 @@ public class ConfigReader {
 
     public int getBuffersize() {
         return buffersize;
+    }
+
+    public int getWaitafteraudioout(){
+        return waitafteraudioout;
     }
 }

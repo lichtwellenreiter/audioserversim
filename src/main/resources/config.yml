@@ -1,5 +1,6 @@
 #Configfile for Audioserversimulator
-audiofilespath: \\bn-infra-03\CusBas\System-Wave
-audiofilesext: .wav
-lsgroupnr: 9690430001001
-buffersize: 128000
+audiofilespath: \\bn-infra-03\CusBas\System-Wave  # Share where AudioFragments are stored
+audiofilesext: .wav                               # Extension for the AudioFragments
+lsgroupnr: 9690430001001                          # LS Group Number
+buffersize: 128000                                # Buffersize for Audioplayer
+waitafteraudioout: 10000                          # Waittime in ms
