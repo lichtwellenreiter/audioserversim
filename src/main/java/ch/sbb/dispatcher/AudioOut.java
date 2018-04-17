@@ -12,7 +12,9 @@ public class AudioOut {
     public List<Long> speakerlist = new ArrayList<Long>();
 
 
-    public long getHandle() { return handle; }
+    public long getHandle() {
+        return handle;
+    }
 
     public void setHandle(long handle) {
         this.handle = handle;
@@ -38,5 +40,7 @@ public class AudioOut {
         return audiofilelist;
     }
 
-    public List<Long> getSpeakerlist() { return speakerlist; }
+    public List<Long> getSpeakerlist() {
+        return speakerlist;
+    }
 }

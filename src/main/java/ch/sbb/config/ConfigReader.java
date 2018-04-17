@@ -24,7 +24,7 @@ public class ConfigReader {
         return buffersize;
     }
 
-    public int getWaitafteraudioout(){
+    public int getWaitafteraudioout() {
         return waitafteraudioout;
     }
 }

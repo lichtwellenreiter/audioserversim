@@ -1,11 +1,8 @@
 package ch.sbb.config;
 
 import ch.sbb.helpers.Helper;
-import ch.sbb.player.AudioPlayer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -114,5 +111,7 @@ public class Config {
         return configreader.getBuffersize();
     }
 
-    public int getWaitAfterAudioOut(){ return  configreader.getWaitafteraudioout(); }
+    public int getWaitAfterAudioOut() {
+        return configreader.getWaitafteraudioout();
+    }
 }

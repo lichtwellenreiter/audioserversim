@@ -2,27 +2,25 @@ package ch.sbb.audioserversim;
 
 import ch.sbb.adapter.AgsbAdapter;
 import ch.sbb.config.Config;
-import ch.sbb.dispatcher.AudioOut;
 import ch.sbb.helpers.Helper;
 import ch.sbb.player.AudioPlayer;
+import ch.sbb.ui.AppStarter;
 import org.apache.commons.cli.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 public class AudioServerSim {
 
-    private Config config;
     private static Helper helper = new Helper();
+    private Config config;
 
     public static void main(final String[] args) throws ParseException {
 
         AudioServerSim assm = new AudioServerSim();
         Options options = new Options();
         options.addOption("c", true, "path to configfile");
-        options.addOption("w", "window",false, "load ui");
+        options.addOption("w", "window", false, "load ui");
 
         CommandLineParser parser = new DefaultParser();
         CommandLine cmd = parser.parse(options, args);
@@ -50,13 +48,13 @@ public class AudioServerSim {
             }
         }.start();
 
-        /*if( cmd.hasOption("w") ){
-            new Thread(){
-                public void run(){
+        if (cmd.hasOption("w")) {
+            new Thread() {
+                public void run() {
                     currentThread().setName("AudioServerSimUI");
-                    AudioServerSimApp.main(args);
+                    AppStarter.main(args);
                 }
             }.start();
-        }*/
+        }
     }
 }
