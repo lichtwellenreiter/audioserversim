@@ -3,6 +3,7 @@ package ch.sbb.config;
 public class ConfigReader {
 
     private String audiofilespath;
+    private String flexpath;
     private String audiofilesext;
     private long lsgroupnr;
     private int buffersize;
@@ -10,6 +11,10 @@ public class ConfigReader {
 
     public String getAudiofilespath() {
         return audiofilespath;
+    }
+
+    public String getFlexpath() {
+        return flexpath;
     }
 
     public String getAudiofilesext() {
@@ -27,4 +32,5 @@ public class ConfigReader {
     public int getWaitafteraudioout() {
         return waitafteraudioout;
     }
+
 }

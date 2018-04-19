@@ -2,6 +2,7 @@ package ch.sbb.audioserversim;
 
 import ch.sbb.adapter.AgsbAdapter;
 import ch.sbb.config.Config;
+import ch.sbb.dispatcher.AudioOut;
 import ch.sbb.helpers.Helper;
 import ch.sbb.player.AudioPlayer;
 import ch.sbb.ui.AppStarter;
@@ -31,20 +32,21 @@ public class AudioServerSim {
         /***************************************
          * Declaring Queues for Communication between Threads
          **************************************/
-        final BlockingQueue<String> agsboutqueue = new ArrayBlockingQueue<String>(100);
+        final BlockingQueue<String> agsboutqueue = new ArrayBlockingQueue<String>(100);             // Queue Back to AGSB
+        final BlockingQueue<AudioOut> audioplayerqueue = new ArrayBlockingQueue<AudioOut>(100);     // Queue to player
 
         new Thread() {
 
             public void run() {
                 currentThread().setName("AGSBAdapter");
-                AgsbAdapter.main(args, agsboutqueue);
+                AgsbAdapter.main(args, agsboutqueue, audioplayerqueue);
             }
         }.start();
 
         new Thread() {
             public void run() {
                 currentThread().setName("AudioPlayer");
-                AudioPlayer.main(args);
+                AudioPlayer.main(args, agsboutqueue, audioplayerqueue);
             }
         }.start();
 

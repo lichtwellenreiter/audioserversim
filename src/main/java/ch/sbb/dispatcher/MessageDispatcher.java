@@ -2,7 +2,6 @@ package ch.sbb.dispatcher;
 
 import ch.sbb.config.Config;
 import ch.sbb.helpers.Helper;
-import ch.sbb.player.AudioPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -17,27 +16,26 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.util.List;
+import java.util.Arrays;
 import java.util.concurrent.BlockingQueue;
 
 public class MessageDispatcher {
 
     final static Logger logger = LogManager.getLogger(MessageDispatcher.class);
-    private final AudioPlayer audioplayer;
     private String audiomessage;
     private Helper helper = new Helper();
     private Config config = new Config(helper.getConfigFileWithPath());
     private BlockingQueue<String> handlequeue;
+    private BlockingQueue<AudioOut> audioplayerqueue;
 
-    public MessageDispatcher(BlockingQueue<String> queue) {
+    public MessageDispatcher(BlockingQueue<String> queue, BlockingQueue<AudioOut> audioplayerqueue) {
         this.config.readConfig();
         this.handlequeue = queue;
-        this.audioplayer = new AudioPlayer(this.handlequeue);
+        this.audioplayerqueue = audioplayerqueue;
     }
 
     public void enqueueMessage(String message) {
         this.audiomessage = message;
-        logger.info(message);
         this.xmlParser();
     }
 
@@ -53,16 +51,12 @@ public class MessageDispatcher {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             dbFactory.setValidating(false);
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            //Document doc = dBuilder.parse(this.audiomessage);
-
             Document doc = dBuilder.parse(new InputSource(new ByteArrayInputStream(this.audiomessage.getBytes("utf-8"))));
-
-            //Document doc = dBuilder.parse("D:\\01_Projekte\\AudioServerSim\\src\\main\\resources\\KIBAudioTestInterface\\AudioServer(1322)-KIB ComNode (LS1) AGSB 2 BTA-FRQ\\anschluss_biel.xml");
-
             doc.getDocumentElement().normalize();
-            logger.info("ROOT: " + doc.getDocumentElement().getNodeName());
 
-            if (!doc.getDocumentElement().getNodeName().equals("audiokill") || !doc.getDocumentElement().getNodeName().equals("IF_Heartbeat")) {
+            logger.info("Received MessageType: {}", doc.getDocumentElement().getNodeName());
+
+            if (doc.getDocumentElement().getNodeName().equals("audioout")) {
 
                 ao.setHandle(Long.parseLong(doc.getElementsByTagName("handle").item(0).getTextContent()));
 
@@ -93,26 +87,19 @@ public class MessageDispatcher {
                         }
                     }
 
-                    audioplayer.audioplayerqueue.add(ao);
-                    logger.info("added " + ao.getHandle() + " to audiooutqueue");
+                    this.audioplayerqueue.add(ao);
+
+                    logger.info("Added Message-Handle [{}] to AudioPlayerQueue", ao.getHandle());
 
                 } else {
-                    logger.info("skipped message with handle " + ao.getHandle() + ". Not in SpeakerNr");
+                    logger.info("Skipped message with handle {}. Reason: {} not in Speaker Configuration", ao.getHandle(), Arrays.toString(speakerlist));
                 }
 
             }
 
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
 
-    }
-
-    private List<String> transformXML() {
-        return null;
     }
 }

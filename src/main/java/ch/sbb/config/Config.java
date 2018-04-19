@@ -48,8 +48,9 @@ public class Config {
             FileWriter fw = new FileWriter(configfile);
             fw.write("#Configfile for Audioserversimulator\n");
             fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\System-Wave\t# Share where AudioFragments are stored\n");
+            fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\Flex \t# Path for Flexmessages\n");
             fw.write("audiofilesext: .wav\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Extension for the AudioFragments\n");
-            fw.write("lsgroupnr: 9690430005001\t\t\t\t\t\t\t\t\t\t\t\t\t\t# LS Group Number\n");
+            fw.write("lsgroupnr: 9690700003001\t\t\t\t\t\t\t\t\t\t\t\t\t\t# LS Group Number BN5/6\n");
             fw.write("buffersize: 128000\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Buffersize for Audioplayer\n");
             fw.write("waitafteraudioout: 10000\t\t\t\t\t\t\t\t\t\t\t\t\t# Waittime in ms\n");
             fw.close();
@@ -98,6 +99,8 @@ public class Config {
     public String getAudiofilesPath() {
         return configreader.getAudiofilespath();
     }
+
+    public String getFlexPath(){return configreader.getFlexpath();}
 
     public String getAudiofilesExt() {
         return configreader.getAudiofilesext();
