@@ -45,7 +45,6 @@ public class AgsbAdapter {
                 } else {
                     String line = br.readLine();
                     md.enqueueMessage(line);
-
                 }
 
             }
