@@ -6,10 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
-import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.concurrent.BlockingQueue;
 
 public class AgsbAdapter {
@@ -17,6 +15,7 @@ public class AgsbAdapter {
     private final static Logger logger = LogManager.getLogger(AgsbAdapter.class);
     private static ServerSocket echoServer = null;
     private static MessageDispatcher md;
+    private static boolean running = true;
 
 
     public static void main(String[] args, BlockingQueue<String> handlequeue, BlockingQueue<AudioOut> audioplayerqueue) {
@@ -34,11 +33,11 @@ public class AgsbAdapter {
             PrintStream os = new PrintStream(clientSocket.getOutputStream());
             PrintWriter pw = new PrintWriter(os);
 
-            while (true) {
+            while (running) {
 
-                logger.info("AGSBOutQueue Size {}", handlequeue.size());
+                logger.debug("AGSBOutQueue Size {}", handlequeue.size());
 
-                if (handlequeue.size() > 0) {
+                if (!handlequeue.isEmpty()) {
                     String handle = handlequeue.poll();
                     logger.info("Send back {}", handle);
                     pw.write(String.format("<?xml version='1.0'?><audioreply><handle>%s</handle><returncode>0</returncode></audioreply>", handle));
@@ -47,9 +46,15 @@ public class AgsbAdapter {
                     md.enqueueMessage(line);
                 }
 
+                if( handlequeue.size() < 0){
+                    running = false;
+                    System.exit(0);
+                }
+
             }
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
 }

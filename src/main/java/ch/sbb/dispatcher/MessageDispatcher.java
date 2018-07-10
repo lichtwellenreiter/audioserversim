@@ -95,6 +95,14 @@ public class MessageDispatcher {
                     logger.info("Skipped message with handle {}. Reason: {} not in Speaker Configuration", ao.getHandle(), Arrays.toString(speakerlist));
                 }
 
+            } else if (doc.getDocumentElement().getNodeName().equals("IF_Heartbeat")){
+
+                logger.info("got a heartbeat send it back to the agsb please");
+                // todo send heartbeat back
+
+            } else if(doc.getDocumentElement().getNodeName().equals("audiokill")){
+                logger.info("got an audiokill for " + doc.getElementsByTagName("handle").item(0).getTextContent());
+                // todo kill audioplay and send back to server
             }
 
         } catch (ParserConfigurationException | SAXException | IOException e) {

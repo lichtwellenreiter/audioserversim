@@ -1,11 +1,19 @@
 package ch.sbb.helpers;
 
-import ch.sbb.audioserversim.AudioServerSim;
+import ch.sbb.AudioServerSim;
+import ch.sbb.player.AudioPlayer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
 public class Helper {
+
+    private final Logger logger = LogManager.getLogger(AudioPlayer.class);
+    private final String VERSION = "0.1";
+
+
 
     public String getJarPath() {
         String path = AudioServerSim.class.getProtectionDomain().getCodeSource().getLocation().getPath();
@@ -39,6 +47,7 @@ public class Helper {
         System.out.println("|                        (c) 2018 Florian Thievent                           |");
         System.out.println("|                                                                            |");
         System.out.println("==============================================================================");
+        logger.info("AudioServerSim "+VERSION+" is starting");
     }
 
 }

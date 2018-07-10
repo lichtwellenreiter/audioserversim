@@ -12,6 +12,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 
+
+// todo send back to server that the message finished
+
 public class AudioPlayer {
 
     private final static Logger logger = LogManager.getLogger(AudioPlayer.class);
@@ -21,19 +24,18 @@ public class AudioPlayer {
     private static File audiofile;
 
     public static void main(String[] args, BlockingQueue<String> queue, BlockingQueue<AudioOut> audioplayerqueue) {
-        logger.info("AudioPlayer started");
+        logger.info("AudioPlayer ready for messages");
         config.readConfig();
 
         while (runner) {
 
-            if (audioplayerqueue.size() > 0) {
+            if (!audioplayerqueue.isEmpty()) {
 
                 AudioOut ao = audioplayerqueue.poll();
 
-
                 if (ao != null) {
                     String handle = String.valueOf(ao.getHandle());
-                    logger.warn("Polled Handle: {} from audioplayerqueue", handle);
+                    logger.info("Polled Handle: {} from audioplayerqueue", handle);
 
                     // Determine AudioFile Format from Config File
 
@@ -49,7 +51,7 @@ public class AudioPlayer {
                                 throw new NoAudioPlayerException("No default player");
                         }
                     } catch (NoAudioPlayerException e) {
-                        e.printStackTrace();
+                        logger.error(e.getStackTrace());
                     }
 
 
@@ -66,8 +68,10 @@ public class AudioPlayer {
             try {
                 Thread.sleep(config.getWaitAfterAudioOut());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                logger.error(e.getStackTrace());
             }
+
+
         }
     }
 

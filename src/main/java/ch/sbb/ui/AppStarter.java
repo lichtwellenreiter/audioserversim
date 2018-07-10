@@ -1,43 +1,28 @@
 package ch.sbb.ui;
 
+
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class AppStarter extends Application {
 
-    private Stage primaryStage;
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		PresentationModel pm = new PresentationModel();
+		Parent rootPanel = new ApplicationUI(pm);
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+		Scene scene = new Scene(rootPanel);
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent rootPanel = new ApplicationUI();
-        this.primaryStage = primaryStage;
+		primaryStage.titleProperty().bind(pm.applicationTitleProperty());
 
-        Scene scene = new Scene(rootPanel);
+		primaryStage.setScene(scene);
 
+		primaryStage.show();
+	}
 
-        primaryStage.setTitle("JavaFX App");
-        primaryStage.setWidth(650);
-        primaryStage.setHeight(400);
-        primaryStage.setMinHeight(400);
-        primaryStage.setMinWidth(650);
-        primaryStage.setScene(scene);
-
-        this.registerStageEventHandler();
-
-        primaryStage.show();
-    }
-
-    public void registerStageEventHandler() {
-        this.primaryStage.setOnCloseRequest(event -> {
-            Platform.exit();
-            System.exit(0);
-        });
-    }
+	public static void main(String[] args) {
+		launch(args);
+	}
 }

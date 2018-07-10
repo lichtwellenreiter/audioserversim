@@ -1,16 +1,14 @@
 package ch.sbb.ui;
 
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class ApplicationUI extends StackPane {
 
-    final static Logger logger = LogManager.getLogger(ApplicationUI.class);
+    private PresentationModel pm;
     private Button button;
 
-    public ApplicationUI() {
+    public ApplicationUI(PresentationModel pm) {
+        this.pm = pm;
+
         initializeSelf();
         initializeControls();
         layoutControls();
@@ -25,7 +23,7 @@ public class ApplicationUI extends StackPane {
     }
 
     private void initializeControls() {
-        button = new Button("this is a button!");
+        button = new Button();
     }
 
     private void layoutControls() {
@@ -33,16 +31,12 @@ public class ApplicationUI extends StackPane {
     }
 
     private void setupEventHandlers() {
-        button.setOnAction(event -> this.buttonCheck());
     }
 
     private void setupValueChangedListeners() {
     }
 
     private void setupBindings() {
-    }
-
-    private void buttonCheck() {
-        logger.debug("Test the Button ...");
+     button.textProperty().bind(pm.commandNameProperty());
     }
 }

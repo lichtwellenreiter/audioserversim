@@ -1,11 +1,10 @@
-package ch.sbb.audioserversim;
+package ch.sbb;
 
 import ch.sbb.adapter.AgsbAdapter;
 import ch.sbb.config.Config;
 import ch.sbb.dispatcher.AudioOut;
 import ch.sbb.helpers.Helper;
 import ch.sbb.player.AudioPlayer;
-import ch.sbb.ui.AppStarter;
 import org.apache.commons.cli.*;
 
 import java.util.concurrent.ArrayBlockingQueue;
@@ -21,7 +20,7 @@ public class AudioServerSim {
         AudioServerSim assm = new AudioServerSim();
         Options options = new Options();
         options.addOption("c", true, "path to configfile");
-        options.addOption("w", "window", false, "load ui");
+        options.addOption("ui",  false, "start application ui");
 
         CommandLineParser parser = new DefaultParser();
         CommandLine cmd = parser.parse(options, args);
@@ -29,7 +28,7 @@ public class AudioServerSim {
         assm.config = new Config(helper.getConfigFileWithPath());
         assm.config.readConfig();
         helper.printHead();
-        /***************************************
+        /**************************************
          * Declaring Queues for Communication between Threads
          **************************************/
         final BlockingQueue<String> agsboutqueue = new ArrayBlockingQueue<String>(100);             // Queue Back to AGSB
@@ -50,13 +49,10 @@ public class AudioServerSim {
             }
         }.start();
 
-        if (cmd.hasOption("w")) {
-            new Thread() {
-                public void run() {
-                    currentThread().setName("AudioServerSimUI");
-                    AppStarter.main(args);
-                }
-            }.start();
+        if( cmd.hasOption("ui") ){
+            System.out.println("Power up ui");
         }
+
+
     }
 }
