@@ -5,10 +5,18 @@ import ch.sbb.config.Config;
 import ch.sbb.dispatcher.AudioOut;
 import ch.sbb.helpers.Helper;
 import ch.sbb.player.AudioPlayer;
+import ch.sbb.ui.AppStarter;
 import org.apache.commons.cli.*;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+
+import static sun.jvm.hotspot.runtime.PerfMemory.start;
+import static sun.misc.PostVMInitHook.run;
+
+/**
+ * jdk1.8.0_171.jdk
+ */
 
 public class AudioServerSim {
 
@@ -50,7 +58,14 @@ public class AudioServerSim {
         }.start();
 
         if( cmd.hasOption("ui") ){
-            System.out.println("Power up ui");
+            new Thread() {
+
+                public void run() {
+                    currentThread().setName("AudioServerUI");
+                    this.setName("AudioServerUI");
+                    AppStarter.main(args, agsboutqueue, audioplayerqueue);
+                }
+            }.start();
         }
 
 

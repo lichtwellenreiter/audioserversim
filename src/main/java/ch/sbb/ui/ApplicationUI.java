@@ -1,6 +1,9 @@
 package ch.sbb.ui;
 
 
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+
 public class ApplicationUI extends StackPane {
 
     private PresentationModel pm;
@@ -31,6 +34,9 @@ public class ApplicationUI extends StackPane {
     }
 
     private void setupEventHandlers() {
+        button.setOnAction(event -> {
+            pm.getLogger().info("WOW");
+        });
     }
 
     private void setupValueChangedListeners() {
