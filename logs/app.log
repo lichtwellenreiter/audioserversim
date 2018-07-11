@@ -1,77 +1,16 @@
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -                                                                               
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -    ___            _ _       _____                          _____ _            
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -   / _ \          | (_)     /  ___|                        /  ___(_)           
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -  / /_\ \_   _  __| |_  ___ \ `--.  ___ _ ____   _____ _ __\ `--. _ _ __ ___   
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -  |  _  | | | |/ _` | |/ _ \ `--. \/ _ \ '__\ \ / / _ \ '__|`--. \ | '_ ` _ \  
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -  | | | | |_| | (_| | | (_) /\__/ /  __/ |   \ V /  __/ |  /\__/ / | | | | | | 
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -  \_| |_/\__,_|\__,_|_|\___/\____/ \___|_|    \_/ \___|_|  \____/|_|_| |_| |_| 
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer -                                                                               
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer - ==============================================================================
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer - |                                                                            |
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer - |                        (c) 2018 Florian Thievent                           |
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer - |                                                                            |
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer - ==============================================================================
-2018-07-11 16:12:17.159 [main] INFO  ch.sbb.player.AudioPlayer - AudioServerSim 0.1 is starting
-2018-07-11 16:12:17.190 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - AudioPlayer ready for messages
-2018-07-11 16:12:17.190 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:12:27.190 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:12:31.589 [JavaFX Application Thread] INFO  ch.sbb.ui.ApplicationUI - WOW
-2018-07-11 16:12:37.191 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:12:47.192 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:12:57.194 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:13:07.196 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:13:17.198 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:13:27.199 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:13:37.200 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:13:47.201 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:13:57.202 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:14:07.202 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:14:17.203 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:14:27.205 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:14:37.205 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:14:47.205 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:14:57.207 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:15:07.208 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:15:17.209 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:15:27.212 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:15:37.213 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:15:47.213 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:15:57.215 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:16:07.215 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:16:17.215 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:16:27.215 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:16:37.216 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:16:47.216 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:16:57.216 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:17:07.217 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:17:17.217 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:17:27.219 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:17:37.220 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:17:47.220 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:17:57.220 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:18:07.224 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:18:17.225 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:18:27.228 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:18:37.234 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:18:47.235 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:18:57.236 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:19:07.238 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:19:17.239 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:19:27.240 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:19:37.242 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:19:47.244 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:19:57.246 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:20:07.247 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:20:17.249 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:20:27.250 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:20:37.250 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:20:47.251 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:20:57.253 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:21:07.254 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:21:17.255 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:21:27.255 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:21:37.256 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:21:47.256 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:21:57.257 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:22:07.258 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0
-2018-07-11 16:22:17.260 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - Audio
+2018-07-11 16:39:15.200 [main] INFO  ch.sbb.player.AudioPlayer -                                                                               
+2018-07-11 16:39:15.204 [main] INFO  ch.sbb.player.AudioPlayer -    ___            _ _       _____                          _____ _            
+2018-07-11 16:39:15.204 [main] INFO  ch.sbb.player.AudioPlayer -   / _ \          | (_)     /  ___|                        /  ___(_)           
+2018-07-11 16:39:15.204 [main] INFO  ch.sbb.player.AudioPlayer -  / /_\ \_   _  __| |_  ___ \ `--.  ___ _ ____   _____ _ __\ `--. _ _ __ ___   
+2018-07-11 16:39:15.204 [main] INFO  ch.sbb.player.AudioPlayer -  |  _  | | | |/ _` | |/ _ \ `--. \/ _ \ '__\ \ / / _ \ '__|`--. \ | '_ ` _ \  
+2018-07-11 16:39:15.204 [main] INFO  ch.sbb.player.AudioPlayer -  | | | | |_| | (_| | | (_) /\__/ /  __/ |   \ V /  __/ |  /\__/ / | | | | | | 
+2018-07-11 16:39:15.205 [main] INFO  ch.sbb.player.AudioPlayer -  \_| |_/\__,_|\__,_|_|\___/\____/ \___|_|    \_/ \___|_|  \____/|_|_| |_| |_| 
+2018-07-11 16:39:15.205 [main] INFO  ch.sbb.player.AudioPlayer -                                                                               
+2018-07-11 16:39:15.205 [main] INFO  ch.sbb.player.AudioPlayer - ==============================================================================
+2018-07-11 16:39:15.205 [main] INFO  ch.sbb.player.AudioPlayer - |                                                                            |
+2018-07-11 16:39:15.205 [main] INFO  ch.sbb.player.AudioPlayer - |                        (c) 2018 Florian Thievent                           |
+2018-07-11 16:39:15.205 [main] INFO  ch.sbb.player.AudioPlayer - |                                                                            |
+2018-07-11 16:39:15.206 [main] INFO  ch.sbb.player.AudioPlayer - ==============================================================================
+2018-07-11 16:39:15.206 [main] INFO  ch.sbb.player.AudioPlayer - AudioServerSim 0.1 is starting
+2018-07-11 16:39:15.229 [AudioPlayer] INFO  ch.sbb.player.AudioPlayer - AudioPlayer ready for messages
+2018-07-11 16:39:15.240 [AudioPlayer] DEBUG ch.sbb.player.AudioPlayer - AudioPlayer Queue size: 0

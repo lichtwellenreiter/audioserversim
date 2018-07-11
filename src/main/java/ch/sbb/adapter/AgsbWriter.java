@@ -9,6 +9,5 @@ public class AgsbWriter extends AgsbAdapter {
 
     public AgsbWriter(Config config, BlockingQueue<String> handlequeue, BlockingQueue<AudioOut> audioplayerqueue) {
         super(config, handlequeue, audioplayerqueue);
-
     }
 }

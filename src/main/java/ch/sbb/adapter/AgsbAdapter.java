@@ -17,6 +17,7 @@ public class AgsbAdapter {
     private MessageDispatcher messageDispatcher;
     private boolean running = true;
     private final Logger logger = LogManager.getLogger(AgsbAdapter.class);
+    private MessageDispatcher md;
 
 
     public AgsbAdapter(Config config, BlockingQueue<String> handlequeue, BlockingQueue<AudioOut> audioplayerqueue) {
@@ -29,14 +30,19 @@ public class AgsbAdapter {
             logger.error(e.getStackTrace());
         }
 
+        md = new MessageDispatcher(handlequeue, audioplayerqueue);
+
     }
 
-   /* private final static Logger logger = LogManager.getLogger(AgsbAdapter.class);
-    private static ServerSocket echoServer = null;
-    private static MessageDispatcher md;
-    private static boolean running = true;
+    public ServerSocket getServerSocket() {
+        return serverSocket;
+    }
 
+    public MessageDispatcher getMessageDispatcher() {
+        return messageDispatcher;
+    }
 
+    /*
     public static void main(String[] args, BlockingQueue<String> handlequeue, BlockingQueue<AudioOut> audioplayerqueue) {
         md = new MessageDispatcher(handlequeue, audioplayerqueue);
 
