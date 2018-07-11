@@ -20,7 +20,7 @@ public class Helper {
         try {
             return URLDecoder.decode(path, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            logger.error(e.getStackTrace());
             System.exit(1);
         }
         return null;
@@ -34,19 +34,19 @@ public class Helper {
      * Print Head in Console
      */
     public void printHead() {
-        System.out.println("                                                                              ");
-        System.out.println("   ___            _ _       _____                          _____ _            ");
-        System.out.println("  / _ \\          | (_)     /  ___|                        /  ___(_)           ");
-        System.out.println(" / /_\\ \\_   _  __| |_  ___ \\ `--.  ___ _ ____   _____ _ __\\ `--. _ _ __ ___   ");
-        System.out.println(" |  _  | | | |/ _` | |/ _ \\ `--. \\/ _ \\ '__\\ \\ / / _ \\ '__|`--. \\ | '_ ` _ \\  ");
-        System.out.println(" | | | | |_| | (_| | | (_) /\\__/ /  __/ |   \\ V /  __/ |  /\\__/ / | | | | | | ");
-        System.out.println(" \\_| |_/\\__,_|\\__,_|_|\\___/\\____/ \\___|_|    \\_/ \\___|_|  \\____/|_|_| |_| |_| ");
-        System.out.println("                                                                              ");
-        System.out.println("==============================================================================");
-        System.out.println("|                                                                            |");
-        System.out.println("|                        (c) 2018 Florian Thievent                           |");
-        System.out.println("|                                                                            |");
-        System.out.println("==============================================================================");
+        logger.info("                                                                              ");
+        logger.info("   ___            _ _       _____                          _____ _            ");
+        logger.info("  / _ \\          | (_)     /  ___|                        /  ___(_)           ");
+        logger.info(" / /_\\ \\_   _  __| |_  ___ \\ `--.  ___ _ ____   _____ _ __\\ `--. _ _ __ ___   ");
+        logger.info(" |  _  | | | |/ _` | |/ _ \\ `--. \\/ _ \\ '__\\ \\ / / _ \\ '__|`--. \\ | '_ ` _ \\  ");
+        logger.info(" | | | | |_| | (_| | | (_) /\\__/ /  __/ |   \\ V /  __/ |  /\\__/ / | | | | | | ");
+        logger.info(" \\_| |_/\\__,_|\\__,_|_|\\___/\\____/ \\___|_|    \\_/ \\___|_|  \\____/|_|_| |_| |_| ");
+        logger.info("                                                                              ");
+        logger.info("==============================================================================");
+        logger.info("|                                                                            |");
+        logger.info("|                        (c) 2018 Florian Thievent                           |");
+        logger.info("|                                                                            |");
+        logger.info("==============================================================================");
         logger.info("AudioServerSim "+VERSION+" is starting");
     }
 

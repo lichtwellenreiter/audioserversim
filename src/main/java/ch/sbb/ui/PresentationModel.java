@@ -11,7 +11,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class PresentationModel {
 
-    private final StringProperty applicationTitle = new SimpleStringProperty("JavaFX Application Starter");
+    private final StringProperty applicationTitle = new SimpleStringProperty("AudioServerSim");
     private final StringProperty commandName = new SimpleStringProperty("Wow!");
     private final Logger logger = LogManager.getLogger(ApplicationUI.class);
     private BlockingQueue<String> agsboutqueue;

@@ -8,6 +8,9 @@ public class ConfigReader {
     private long lsgroupnr;
     private int buffersize;
     private int waitafteraudioout;
+    private int agsboutqueuedepth;
+    private int audioplayerqueuedepth;
+    private int serverport;
 
     public String getAudiofilespath() {
         return audiofilespath;
@@ -33,4 +36,15 @@ public class ConfigReader {
         return waitafteraudioout;
     }
 
+    public int getAgsboutqueuedepth() {
+        return agsboutqueuedepth;
+    }
+
+    public int getAudioplayerqueuedepth() {
+        return audioplayerqueuedepth;
+    }
+
+    public int getServerport() {
+        return serverport;
+    }
 }

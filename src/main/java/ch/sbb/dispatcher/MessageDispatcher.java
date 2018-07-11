@@ -2,6 +2,8 @@ package ch.sbb.dispatcher;
 
 import ch.sbb.config.Config;
 import ch.sbb.helpers.Helper;
+import com.sun.org.apache.xml.internal.serialize.OutputFormat;
+import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -52,6 +54,7 @@ public class MessageDispatcher {
             dbFactory.setValidating(false);
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(new InputSource(new ByteArrayInputStream(this.audiomessage.getBytes("utf-8"))));
+            Document rawdoc = doc;
             doc.getDocumentElement().normalize();
 
             logger.info("Received MessageType: {}", doc.getDocumentElement().getNodeName());
@@ -92,15 +95,14 @@ public class MessageDispatcher {
                     logger.info("Added Message-Handle [{}] to AudioPlayerQueue", ao.getHandle());
 
                 } else {
-                    logger.info("Skipped message with handle {}. Reason: {} not in Speaker Configuration", ao.getHandle(), Arrays.toString(speakerlist));
+                    logger.info("Skipped message with handle {}. Reason: {} not in Speaker List", ao.getHandle(), Arrays.toString(speakerlist));
                 }
 
-            } else if (doc.getDocumentElement().getNodeName().equals("IF_Heartbeat")){
-
+            } else if (doc.getDocumentElement().getNodeName().equals("IF_Heartbeat")) {
                 logger.info("got a heartbeat send it back to the agsb please");
                 // todo send heartbeat back
 
-            } else if(doc.getDocumentElement().getNodeName().equals("audiokill")){
+            } else if (doc.getDocumentElement().getNodeName().equals("audiokill")) {
                 logger.info("got an audiokill for " + doc.getElementsByTagName("handle").item(0).getTextContent());
                 // todo kill audioplay and send back to server
             }

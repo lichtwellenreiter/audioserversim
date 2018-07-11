@@ -5,3 +5,6 @@ audiofilesext: .wav                                 # Extension for the AudioFra
 lsgroupnr: 9690700003001                            # LS Group Number
 buffersize: 128000                                  # Buffersize for Audioplayer
 waitafteraudioout: 10000                            # Waittime in ms
+agsboutqueuedepth: 100                              # Max Messages allowed in Queue to send to AGSB
+audioplayerqueuedepth: 100                          # Max Messages allowed in Queue for the Audioplayer
+serverport: 8001                                    # Serverport to be used in the Simulator to make connection to agsb

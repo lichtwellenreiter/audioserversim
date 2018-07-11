@@ -45,15 +45,15 @@ public class Config {
 
         File configfile = new File(helper.getConfigFileWithPath());
         try {
-            FileWriter fw = new FileWriter(configfile);
-            fw.write("#Configfile for Audioserversimulator\n");
-            fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\System-Wave\t# Share where AudioFragments are stored\n");
-            fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\Flex \t# Path for Flexmessages\n");
-            fw.write("audiofilesext: .wav\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Extension for the AudioFragments\n");
-            fw.write("lsgroupnr: 9690700003001\t\t\t\t\t\t\t\t\t\t\t\t\t\t# LS Group Number BN5/6\n");
-            fw.write("buffersize: 128000\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Buffersize for Audioplayer\n");
-            fw.write("waitafteraudioout: 10000\t\t\t\t\t\t\t\t\t\t\t\t\t# Waittime in ms\n");
-            fw.close();
+            try (FileWriter fw = new FileWriter(configfile)) {
+                fw.write("#Configfile for Audioserversimulator\n");
+                fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\System-Wave\t# Share where AudioFragments are stored\n");
+                fw.write("audiofilespath: \\\\bn-infra-03\\CusBas\\Flex \t# Path for Flexmessages\n");
+                fw.write("audiofilesext: .wav\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Extension for the AudioFragments\n");
+                fw.write("lsgroupnr: 9690700003001\t\t\t\t\t\t\t\t\t\t\t\t\t\t# LS Group Number BN5/6\n");
+                fw.write("buffersize: 128000\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t# Buffersize for Audioplayer\n");
+                fw.write("waitafteraudioout: 10000\t\t\t\t\t\t\t\t\t\t\t\t\t# Waittime in ms\n");
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -67,28 +67,28 @@ public class Config {
 
         File lg4jproperties = new File(helper.getJarPath() + this.LG4JFILENAME);
         try {
-            FileWriter fw = new FileWriter(lg4jproperties);
-            fw.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-            fw.write("<Configuration status=\"DEBUG\">\n");
-            fw.write("    <Appenders>\n");
-            fw.write("        <Console name=\"Console\" target=\"SYSTEM_OUT\">\n");
-            fw.write("            <PatternLayout pattern=\"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\" />\n");
-            fw.write("        </Console>\n");
-            fw.write("        <File name=\"MyFile\" fileName=\"logs/app.log\" immediateFlush=\"false\" append=\"false\">\n");
-            fw.write("            <PatternLayout pattern=\"%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\"/>\n");
-            fw.write("        </File>\n");
-            fw.write("    </Appenders>\n");
-            fw.write("    <Loggers>\n");
-            fw.write("          <logger name=\"filelogger\" level=\"error\">\n");
-            fw.write("              <appender-ref ref=\"MyFile\"/>\n");
-            fw.write("          </logger>\n");
-            fw.write("        <Root level=\"debug\">\n");
-            fw.write("            <AppenderRef ref=\"Console\" />\n");
-            fw.write("            <AppenderRef ref=\"MyFile\"/>\n");
-            fw.write("        </Root>\n");
-            fw.write("    </Loggers>\n");
-            fw.write("</Configuration>\n");
-            fw.close();
+            try (FileWriter fw = new FileWriter(lg4jproperties)) {
+                fw.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+                fw.write("<Configuration status=\"DEBUG\">\n");
+                fw.write("    <Appenders>\n");
+                fw.write("        <Console name=\"Console\" target=\"SYSTEM_OUT\">\n");
+                fw.write("            <PatternLayout pattern=\"%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\" />\n");
+                fw.write("        </Console>\n");
+                fw.write("        <File name=\"MyFile\" fileName=\"logs/app.log\" immediateFlush=\"false\" append=\"false\">\n");
+                fw.write("            <PatternLayout pattern=\"%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n\"/>\n");
+                fw.write("        </File>\n");
+                fw.write("    </Appenders>\n");
+                fw.write("    <Loggers>\n");
+                fw.write("          <logger name=\"filelogger\" level=\"error\">\n");
+                fw.write("              <appender-ref ref=\"MyFile\"/>\n");
+                fw.write("          </logger>\n");
+                fw.write("        <Root level=\"debug\">\n");
+                fw.write("            <AppenderRef ref=\"Console\" />\n");
+                fw.write("            <AppenderRef ref=\"MyFile\"/>\n");
+                fw.write("        </Root>\n");
+                fw.write("    </Loggers>\n");
+                fw.write("</Configuration>\n");
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -100,7 +100,9 @@ public class Config {
         return configreader.getAudiofilespath();
     }
 
-    public String getFlexPath(){return configreader.getFlexpath();}
+    public String getFlexPath() {
+        return configreader.getFlexpath();
+    }
 
     public String getAudiofilesExt() {
         return configreader.getAudiofilesext();
@@ -116,5 +118,17 @@ public class Config {
 
     public int getWaitAfterAudioOut() {
         return configreader.getWaitafteraudioout();
+    }
+
+    public int getAgsboutqueuedepth() {
+        return configreader.getAgsboutqueuedepth();
+    }
+
+    public int getAudioplayerqueuedepth() {
+        return configreader.getAudioplayerqueuedepth();
+    }
+
+    public int getServerport() {
+        return configreader.getServerport();
     }
 }

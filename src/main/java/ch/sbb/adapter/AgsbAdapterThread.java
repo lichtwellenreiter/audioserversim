@@ -1,37 +1,17 @@
 package ch.sbb.adapter;
 
-import ch.sbb.config.Config;
 import ch.sbb.dispatcher.AudioOut;
 import ch.sbb.dispatcher.MessageDispatcher;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
 
-public class AgsbAdapter {
-
-    private ServerSocket serverSocket = null;
-    private Config config;
-    private MessageDispatcher messageDispatcher;
-    private boolean running = true;
-    private final Logger logger = LogManager.getLogger(AgsbAdapter.class);
-
-
-    public AgsbAdapter(Config config, BlockingQueue<String> handlequeue, BlockingQueue<AudioOut> audioplayerqueue) {
-        this.config = config;
-        this.messageDispatcher = new MessageDispatcher(handlequeue, audioplayerqueue);
-
-        try {
-            this.serverSocket = new ServerSocket(config.getServerport());
-        } catch (IOException e) {
-            logger.error(e.getStackTrace());
-        }
-
-    }
-
-   /* private final static Logger logger = LogManager.getLogger(AgsbAdapter.class);
+public class AgsbAdapterThread extends Thread {
+    private final static Logger logger = LogManager.getLogger(AgsbAdapter.class);
     private static ServerSocket echoServer = null;
     private static MessageDispatcher md;
     private static boolean running = true;
@@ -75,5 +55,5 @@ public class AgsbAdapter {
             e.printStackTrace();
 
         }
-    }*/
+    }
 }
